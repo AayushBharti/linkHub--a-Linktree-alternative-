@@ -2,42 +2,160 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.App {
-  text-align: center;
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #171a1d #31363b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*::-webkit-scrollbar-track {
+  background: #31363b;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+*::-webkit-scrollbar-thumb {
+  background-color: #171a1d;
+  border-radius: 30px;
+  border: 3px none #ffffff;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   color: white;
+  scroll-behavior: smooth;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  /* user-drag: none; */
+  -webkit-user-drag: none;
+
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  /* min-height: 100vh; */
+  /* background: radial-gradient(ellipse at bottom,  #223344 0%,  #090a0f 100%); */
+  /* opacity: 0; */
+  background-repeat: no-repeat;
+  background-image: url(../assets/aurora.jpg);
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+  position: relative;
+  transition: 1.5s;
 }
 
-@keyframes App-logo-spin {
+.dark-mode {
+  transition: 1.5s;
+  background-image: url(../assets/Kingdom.jpeg);
+}
+
+.theme-button>.light-mode-svg {
+  display: none;
+}
+
+.theme-button.-dark-mode>.light-mode-svg {
+  display: block;
+}
+
+.theme-button.-dark-mode>.dark-mode-svg {
+  display: none;
+}
+
+.bar-icon:hover {
+  transition: .6s;
+  filter: drop-shadow(0 0 5px rgba(4, 0, 0, 0.441));
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 48px;
+  font-size: 18px;
+
+  width: 320px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.1px;
+  border-radius: 22px;
+  cursor: pointer;
+  /* backdrop-filter: blur(10px); */
+  color: white;
+
+  animation-name: btnAnimate;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: calc(0.3s/10);
+  /* Used to start button entrance animation one after another  */
+  /* box-shadow: rgba(0, 0, 0, 0.175) 0px 5px 20px 1px; */
+  transition: all .4s ease-in-out;
+  background-size: 300%;
+}
+
+.button:hover {
+  background-position: 100% 0%;
+  transition: all .4s ease-in-out;
+}
+
+@keyframes btnAnimate {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    opacity: 1;
   }
+}
+
+.github {
+  background-image: linear-gradient(to right, #171c22, #1c2129, #353e4b, #171c22);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.864);
+}
+
+.x {
+  background-image: linear-gradient(to right, #171c22, #1c2129, #353e4b, #171c22);
+  box-shadow: 0 4px 15px 0 rgba(35, 42, 50, 0.864);
+}
+
+.telegram {
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+}
+
+.linkedin {
+  box-shadow: 0 4px 15px 0 rgba(36, 103, 205, 0.79);
+  background-image: linear-gradient(to right, #2c72c6, #4481eb, #07aee6, #2a6ec2);
+}
+
+.message {
+  background-image: linear-gradient(to right, #6253e1, #852D91, #ab3bba, #6253e1);
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+
+.portfolio-btn {
+  background: linear-gradient(15deg, #880088, #aa2068, #cc3f47, #de6f3d, #f09f33, #de6f3d, #cc3f47, #aa2068, #880088) no-repeat;
+  background-size: 300%;
+  background-position: left center;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  transition: .6s ease;
+  box-shadow: 0 5px 15px rgba(214, 56, 141, 0.961);
+}
+
+.portfolio-btn:hover {
+  background-size: 320%;
+  background-position: right center;
 }
