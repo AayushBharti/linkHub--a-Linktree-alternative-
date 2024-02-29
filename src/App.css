@@ -47,7 +47,7 @@ body {
   /* background: radial-gradient(ellipse at bottom,  #223344 0%,  #090a0f 100%); */
   /* opacity: 0; */
   background-repeat: no-repeat;
-  background-image: url(../assets/aurora.jpg);
+  background-image: url(./assets/aurora.jpg);
   background-size: cover;
   background-position: left;
   background-attachment: fixed;
@@ -57,18 +57,18 @@ body {
 
 .dark-mode {
   transition: 1.5s;
-  background-image: url(../assets/Kingdom.jpeg);
+  background-image: url(./assets/Kingdom.jpeg);
 }
 
 .theme-button>.light-mode-svg {
   display: none;
 }
 
-.theme-button.-dark-mode>.light-mode-svg {
+.dark-mode>.light-mode-svg {
   display: block;
 }
 
-.theme-button.-dark-mode>.dark-mode-svg {
+.dark-mode>.dark-mode-svg {
   display: none;
 }
 
