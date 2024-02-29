@@ -39,10 +39,10 @@
   -ms-user-select: none;
   /* user-drag: none; */
   -webkit-user-drag: none;
-
 }
 
 body {
+  background-color: black;
   /* min-height: 100vh; */
   /* background: radial-gradient(ellipse at bottom,  #223344 0%,  #090a0f 100%); */
   /* opacity: 0; */
@@ -60,17 +60,17 @@ body {
   background-image: url(./assets/Kingdom.jpeg);
 }
 
-.theme-button>.light-mode-svg {
+/* .light-mode-svg {
   display: none;
 }
 
-.dark-mode>.light-mode-svg {
+.theme-button .dark-mode>.light-mode-svg {
   display: block;
 }
 
-.dark-mode>.dark-mode-svg {
+.theme-button .dark-mode>.dark-mode-svg {
   display: none;
-}
+} */
 
 .bar-icon:hover {
   transition: .6s;
