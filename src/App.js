@@ -6,7 +6,7 @@ import linkedinLogo from './assets/GNvM541FBQu7.gif';
 
 function App() {
 
-  function changeIcon()
+  function darkModeHandler()
   {   
       // document.body.style.backgroundImage="url(./assets/Kingdom.jpeg)";
       document.body.classList.toggle("dark-mode");
@@ -28,7 +28,7 @@ function App() {
         <div className="absolute w-0 h-0 hidden"><img src="./assets/Kingdom.jpeg" alt="" /></div>  {/*just for loading*/}
         <div className="relative w-max-[1080px] mt-12 mx-auto flex flex-col justify-center items-center">
 
-          <button onClick={changeIcon} id="themeButton"
+          <button onClick={darkModeHandler} id="themeButton"
             className="theme-button w-[2em] h-[2em] p-1 absolute right-5 top-0 cursor-pointer flex 
               justify-start items-center rounded-full hover:bg-[#ffffff19] transition-all duration-200">
             <svg className="light-mode-svg hidden transition-all duration-500" viewBox="0 0 24 24"><g fill="#ffff"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg>
@@ -38,7 +38,7 @@ function App() {
           <div className="flex flex-col justify-center items-center">
             <a href="./">
                 {/*<img class="h-[8em] rounded-full logo" src="/assets/small c.gif" alt="">*/}
-              <video loop autoPlay muted class="h-[7.5em] rounded-full">
+              <video loop autoPlay muted disablePictureInPicture class="h-[7.5em] rounded-full">
                 <source src={logo} type="video/webm"/>
               </video>
             </a>
